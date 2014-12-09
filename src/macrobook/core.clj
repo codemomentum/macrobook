@@ -34,7 +34,9 @@ mapper1
 (defmacro inspect-caller-locals [] (->> (keys &env)
                                         (map (fn [k] [`'~k k])) (into {})))
 
-(let [x 5] (inspect-caller-locals))
+(let [x 5 y 6] (inspect-caller-locals))
+
+
 
 
 
